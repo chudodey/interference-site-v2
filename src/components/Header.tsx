@@ -31,7 +31,7 @@ export default function Header({ menuOpen, setMenuOpen, onNavigate }: HeaderProp
           >
             ИР{' '}
             <span className={`${t.caption} text-text-muted font-normal`}>
-              * 16 МАЯ * 19:00 * ИКЦ * КАЛУГА
+              · 16 МАЯ · 19:00 · ИКЦ · КАЛУГА
             </span>
           </button>
 

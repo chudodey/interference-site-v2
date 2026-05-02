@@ -49,7 +49,7 @@ function InterferenceTitleSmall() {
   return (
     <div className="select-none">
       <div className={`flex justify-between ${t.displaySm}`}>
-        {'ИНТЕРФЕРЕНЦИЯ'.split('').map((c, i) => (
+        {'ИНТЕРФЕРЕНЦИ'.split('').map((c, i) => (
           <span key={i} className="text-accent-primary">
             {c}
           </span>
@@ -105,29 +105,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </nav>
           </div>
 
-          {/* External links left column */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
-            {EXTERNAL_GROUPS.filter((g) => g.title !== 'ODA.dream').map((group) => (
-              <div key={group.title}>
-                <span className={`${t.highlight} text-text-primary mb-4 block`}>{group.title}</span>
-                <div className={`flex flex-col ${s.stack}`}>
-                  {group.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* External links right column + Contacts */}
+          {/* External links left column — ODA.dream + Contacts (higher priority) */}
           <div className="lg:col-span-1 flex flex-col gap-6">
             <div>
               <span className={`${t.highlight} text-text-primary mb-4 block`}>ODA.dream</span>
@@ -156,6 +134,28 @@ export default function Footer({ onNavigate }: FooterProps) {
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* External links right column — Festival, Registration, Venue */}
+          <div className="lg:col-span-1 flex flex-col gap-6">
+            {EXTERNAL_GROUPS.filter((g) => g.title !== 'ODA.dream').map((group) => (
+              <div key={group.title}>
+                <span className={`${t.highlight} text-text-primary mb-4 block`}>{group.title}</span>
+                <div className={`flex flex-col ${s.stack}`}>
+                  {group.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
