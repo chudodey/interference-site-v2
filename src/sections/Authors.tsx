@@ -68,7 +68,7 @@ export default function Authors() {
 
         {/* Organizers */}
         <div className={s.mbLg}>
-          <h3 className={`${t.badge} text-text-muted mb-6`}>Организаторы</h3>
+          <h3 className={`${t.badge} text-text-muted ${s.mbMd}`}>Организаторы</h3>
           <div className={`flex flex-wrap ${s.gapSm}`}>
             {organizers.map((org) => (
               <a

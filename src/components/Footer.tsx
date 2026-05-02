@@ -116,7 +116,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors`}
+                    className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
                   >
                     {link.label}
                   </a>

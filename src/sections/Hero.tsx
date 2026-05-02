@@ -96,13 +96,15 @@ export default function Hero({ onNavigate }: HeroProps) {
           <p className={`${t.eventDate} text-peach mt-5 mb-5`}>16 мая 2026 · Калуга · 19:00</p>
 
           {/* 5. Flavour quote */}
-          <p className={`${t.quote} text-text-primary/70 mb-6 max-w-md mx-auto`}>
+          <p className={`${t.quote} text-text-primary/70 ${s.mbMd} max-w-md mx-auto`}>
             «Что если спектакль полностью рождается только в момент, когда вы направляете на него
             внимание?»
           </p>
 
           {/* 6. Entry + buttons */}
-          <p className={`${t.label} text-text-muted mb-4`}>Вход свободный, по регистрации · 12+</p>
+          <p className={`${t.label} text-text-muted ${s.mbSm}`}>
+            Вход свободный, по регистрации · 12+
+          </p>
 
           <div className={`flex flex-col sm:flex-row items-center justify-center ${s.gapSm}`}>
             <QuantumButton

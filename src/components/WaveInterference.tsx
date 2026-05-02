@@ -362,7 +362,7 @@ export default function WaveInterference() {
           {showHint && (
             <div className="absolute inset-0 flex items-center justify-center bg-bg-primary/50 backdrop-blur-[2px] z-20 pointer-events-none">
               <div className={`${t.caption} text-text-primary text-center px-4`}>
-                <span className="block text-2xl mb-2">↔</span>
+                <span className={`${t.number} block mb-2`}>↔</span>
                 Перетащите источники
                 <span className="block text-text-muted mt-1">мышью или пальцем</span>
               </div>

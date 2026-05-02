@@ -24,8 +24,8 @@ export default function About() {
         </h2>
 
         <div className={`max-w-3xl ${s.mbLg}`}>
-          <p className={`${t.bodyPrimary} text-text-primary mb-4`}>{showDescription}</p>
-          <p className={`${t.bodySecondary} text-text-muted mb-4`}>{showLead}</p>
+          <p className={`${t.bodyPrimary} text-text-primary ${s.mbSm}`}>{showDescription}</p>
+          <p className={`${t.bodySecondary} text-text-muted ${s.mbSm}`}>{showLead}</p>
           <p className={`${t.bodySecondary} text-text-muted italic`}>{showQuestion}</p>
         </div>
 
@@ -43,7 +43,7 @@ export default function About() {
 
         {/* Quote */}
         <blockquote className={`border-l-2 border-accent-primary pl-6 ${s.mbLg}`}>
-          <p className={`${t.quote} text-peach mb-3`}>«{conceptQuote.text}»</p>
+          <p className={`${t.quote} text-peach ${s.mbSm}`}>«{conceptQuote.text}»</p>
           <cite className={`${t.caption} text-text-muted not-italic`}>{conceptQuote.source}</cite>
         </blockquote>
 

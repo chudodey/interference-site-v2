@@ -41,7 +41,7 @@ export default function Accordion({ items }: AccordionProps) {
             >
               <span className={`${t.navLinkLarge} text-text-primary`}>{item.title}</span>
               <span
-                className={`font-mono text-lg text-accent-primary transition-transform duration-300 shrink-0 ${
+                className={`${t.h3} text-accent-primary transition-transform duration-300 shrink-0 ${
                   isOpen ? 'rotate-45' : ''
                 }`}
               >

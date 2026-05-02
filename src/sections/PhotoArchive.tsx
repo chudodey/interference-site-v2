@@ -159,23 +159,10 @@ export default function PhotoArchive() {
         </div>
       </div>
 
-      {/* Caption + dots */}
+      {/* Dots + caption */}
       <div className={`max-w-5xl mx-auto ${s.container}`}>
-        <p className={`${t.caption} text-text-muted text-center mt-4`}>
-          Спектакль «Проект Шрёдингер» · XIII Фестиваль современного искусства «
-          <a
-            href="https://t-fest.online/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-primary hover:underline"
-          >
-            Циолковский Фест
-          </a>
-          » · Калуга, 2025
-        </p>
-
         {/* Pagination dots */}
-        <div className="flex justify-center items-center gap-2 mt-3">
+        <div className="flex justify-center items-center gap-2 mt-4">
           {PHOTOS.map((_, i) => (
             <button
               key={i}
@@ -194,6 +181,19 @@ export default function PhotoArchive() {
             />
           ))}
         </div>
+
+        <p className={`${t.caption} text-text-muted text-center mt-3`}>
+          Спектакль «Проект Шрёдингер» · XIII Фестиваль современного искусства «
+          <a
+            href="https://t-fest.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-primary hover:underline"
+          >
+            Циолковский Фест
+          </a>
+          » · Калуга, 2025
+        </p>
       </div>
     </section>
   );
