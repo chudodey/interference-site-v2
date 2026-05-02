@@ -49,14 +49,14 @@ const EXTERNAL_GROUPS: ExternalGroup[] = [
 function InterferenceTitleSmall() {
   return (
     <div className="select-none">
-      <div className={`flex justify-between ${t.displaySm}`}>
+      <div className={`flex gap-1 ${t.displaySm}`}>
         {'ИНТЕРФЕРЕНЦИ'.split('').map((c, i) => (
           <span key={i} className="text-accent-primary">
             {c}
           </span>
         ))}
       </div>
-      <div className={`flex justify-between ${t.displaySm}`}>
+      <div className={`flex gap-1 ${t.displaySm}`}>
         {'РЕАЛЬНОСТЕЙ'.split('').map((c, i) => (
           <span key={i} className="text-text-primary">
             {c}
@@ -79,7 +79,7 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-bg-secondary border-t border-border">
       <div className={`max-w-5xl mx-auto ${s.container} ${s.footerPadding}`}>
         {/* Main grid */}
-        <div className={`grid grid-cols-3 lg:grid-cols-4 ${s.gapLg} ${s.mbLg}`}>
+        <div className={`grid grid-cols-3 lg:flex lg:justify-between gap-8 ${s.mbLg}`}>
           {/* Brand */}
           <div className="col-span-3 lg:col-span-1">
             <button onClick={() => onNavigate('hero')} className={`block ${s.mbSm}`}>
