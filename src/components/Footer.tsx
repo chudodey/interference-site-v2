@@ -131,7 +131,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className={`flex flex-col ${s.stack}`}>
               <a
                 href="mailto:hi@odadream.art"
-                className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors`}
+                className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors break-all`}
               >
                 hi@odadream.art
               </a>
