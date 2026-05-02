@@ -165,4 +165,4 @@ grep -o '\.bg-[^}]*{[^}]*}' dist/assets/index-*.css
 ## Контакты
 
 - Проект: ODA Dream
-- Сайт: https://chudodey.github.io/interference-site-v2/
+- Сайт: https://interference.odadream.art/

@@ -4,16 +4,16 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss)](https://tailwindcss.com)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://chudodey.github.io/interference-site-v2/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://interference.odadream.art/)
 [![Kimi CLI](https://img.shields.io/badge/Made%20with-Kimi%20CLI-ff69b4)](https://www.moonshot.cn/kimi)
 
 > Лендинг нейроспектакля-импровизации «Интерференция реальностей», где зритель становится соавтором через нейроинтерфейсы. Сайт разработан с помощью [Kimi CLI](https://www.moonshot.cn/kimi).
 
 **Дата:** 16 мая 2026, 19:00  
 **Место:** ИКЦ, Калуга (ул. Октябрьская, 17а)  
-**Сайт:** [chudodey.github.io/interference-site-v2](https://chudodey.github.io/interference-site-v2/)
+**Сайт:** [interference.odadream.art](https://interference.odadream.art/)
 
-![Превью](https://chudodey.github.io/interference-site-v2/og-image.webp)
+![Превью](https://interference.odadream.art/og-image.webp)
 
 ---
 
