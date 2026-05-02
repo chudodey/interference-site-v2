@@ -7,9 +7,9 @@ const NAV_LINKS = [
   { id: 'about', label: 'О проекте' },
   { id: 'program', label: 'Программа' },
   { id: 'context', label: 'Контекст' },
-  { id: 'materials', label: 'Медиа' },
   { id: 'faq', label: 'FAQ' },
   { id: 'authors', label: 'Авторы' },
+  { id: 'materials', label: 'Медиа' },
 ];
 
 interface ExternalGroup {

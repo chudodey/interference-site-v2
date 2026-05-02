@@ -11,11 +11,11 @@ const NAV_LINKS = [
   { id: 'hero', label: 'Спектакль', hideBelow: 'none' as const },
   { id: 'about', label: 'О проекте', hideBelow: 'none' as const },
   { id: 'program', label: 'Программа', hideBelow: 'none' as const },
-  { id: 'authors', label: 'Авторы', hideBelow: 'none' as const },
-  { id: 'interference', label: 'Лаборатория', hideBelow: 'lg' as const },
-  { id: 'materials', label: 'Медиа', hideBelow: 'lg' as const },
   { id: 'context', label: 'Контекст', hideBelow: 'xl' as const },
+  { id: 'interference', label: 'Лаборатория', hideBelow: 'lg' as const },
   { id: 'faq', label: 'FAQ', hideBelow: 'xl' as const },
+  { id: 'authors', label: 'Авторы', hideBelow: 'none' as const },
+  { id: 'materials', label: 'Медиа', hideBelow: 'lg' as const },
 ];
 
 export default function Header({ menuOpen, setMenuOpen, onNavigate }: HeaderProps) {
