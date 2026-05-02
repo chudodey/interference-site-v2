@@ -1,6 +1,7 @@
 import Divider from './Divider';
 import { t } from '../styles/typography';
 import { s } from '../styles/spacing';
+import { SHOW_MEDIA } from '../data/features';
 
 const NAV_LINKS = [
   { id: 'hero', label: 'Спектакль' },
@@ -9,7 +10,7 @@ const NAV_LINKS = [
   { id: 'context', label: 'Контекст' },
   { id: 'faq', label: 'FAQ' },
   { id: 'authors', label: 'Авторы' },
-  { id: 'materials', label: 'Медиа' },
+  ...(SHOW_MEDIA ? [{ id: 'materials', label: 'Медиа' }] : []),
 ];
 
 interface ExternalGroup {
@@ -174,7 +175,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* GitHub */}
         <div className="pt-4 flex justify-center">
           <a
-            href="https://github.com/chudodey/interference-site-v2"
+            href="https://github.com/odadream/interference-site-v2"
             target="_blank"
             rel="noopener noreferrer"
             className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors flex items-center gap-2`}

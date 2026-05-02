@@ -1,5 +1,6 @@
 import { t } from '../styles/typography';
 import { s } from '../styles/spacing';
+import { SHOW_MEDIA } from '../data/features';
 
 interface HeaderProps {
   menuOpen: boolean;
@@ -15,7 +16,7 @@ const NAV_LINKS = [
   { id: 'interference', label: 'Лаборатория', hideBelow: 'lg' as const },
   { id: 'faq', label: 'FAQ', hideBelow: 'xl' as const },
   { id: 'authors', label: 'Авторы', hideBelow: 'none' as const },
-  { id: 'materials', label: 'Медиа', hideBelow: 'lg' as const },
+  ...(SHOW_MEDIA ? [{ id: 'materials', label: 'Медиа', hideBelow: 'lg' as const }] : []),
 ];
 
 export default function Header({ menuOpen, setMenuOpen, onNavigate }: HeaderProps) {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Header from './components/Header';
 import ScrollProgress from './components/ScrollProgress';
 import Hero from './sections/Hero';
@@ -7,12 +7,14 @@ import Program from './sections/Program';
 import Context from './sections/Context';
 import FAQ from './sections/FAQ';
 import Authors from './sections/Authors';
-import Media from './sections/Media';
 import InterferenceLab from './sections/InterferenceLab';
 import PartnersStrip from './sections/PartnersStrip';
 import PhotoArchive from './sections/PhotoArchive';
 import Footer from './components/Footer';
 import StyleGuide from './components/StyleGuide';
+import { SHOW_MEDIA } from './data/features';
+
+const Media = lazy(() => import('./sections/Media'));
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +55,11 @@ function App() {
         <InterferenceLab />
         <FAQ />
         <Authors />
-        <Media />
+        {SHOW_MEDIA && (
+          <Suspense fallback={null}>
+            <Media />
+          </Suspense>
+        )}
       </main>
       <Footer onNavigate={scrollToSection} />
     </div>
