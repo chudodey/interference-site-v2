@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chudodey.github.io/interference-site-v2/sitemap.xml
