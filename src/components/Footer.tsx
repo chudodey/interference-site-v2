@@ -78,9 +78,9 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-bg-secondary border-t border-border">
       <div className={`max-w-5xl mx-auto ${s.container} py-12 md:py-16`}>
         {/* Main grid */}
-        <div className={`grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-12 ${s.gapLg} ${s.mbLg}`}>
+        <div className={`grid grid-cols-3 lg:grid-cols-4 ${s.gapLg} ${s.mbLg}`}>
           {/* Brand */}
-          <div className="col-span-3 sm:col-span-3 lg:col-span-4">
+          <div className="col-span-3 lg:col-span-1">
             <button onClick={() => onNavigate('hero')} className={`block ${s.mbSm}`}>
               <InterferenceTitleSmall />
             </button>
@@ -90,7 +90,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* Navigation */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <span className={`${t.highlight} text-text-primary mb-4 block`}>Навигация</span>
             <nav className={`flex flex-col ${s.stack}`}>
               {NAV_LINKS.map((link) => (
@@ -105,70 +105,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             </nav>
           </div>
 
-          {/* External groups — mobile only */}
-          {EXTERNAL_GROUPS.map((group) => (
-            <div key={group.title} className="lg:hidden">
-              <span className={`${t.highlight} text-text-primary mb-4 block`}>{group.title}</span>
-              <div className={`flex flex-col ${s.stack}`}>
-                {group.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Contacts — mobile only */}
-          <div className="lg:hidden">
-            <span className={`${t.highlight} text-text-primary mb-4 block`}>Контакты</span>
-            <div className={`flex flex-col ${s.stack}`}>
-              <a
-                href="mailto:hi@odadream.art"
-                className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors break-all`}
-              >
-                hi@odadream.art
-              </a>
-            </div>
-          </div>
-
-          {/* Combined external + contacts — desktop only */}
-          <div className="hidden lg:col-span-6 lg:grid lg:grid-cols-2 gap-8">
-            {/* Left: Festival, Registration, Venue */}
-            <div className="flex flex-col gap-6">
-              {EXTERNAL_GROUPS.filter((g) => g.title !== 'ODA.dream').map((group) => (
-                <div key={group.title}>
-                  <span className={`${t.highlight} text-text-primary mb-4 block`}>
-                    {group.title}
-                  </span>
-                  <div className={`flex flex-col ${s.stack}`}>
-                    {group.links.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Right: ODA.dream + Contacts */}
-            <div className="flex flex-col gap-6">
-              <div>
-                <span className={`${t.highlight} text-text-primary mb-4 block`}>ODA.dream</span>
+          {/* External links left column */}
+          <div className="lg:col-span-1 flex flex-col gap-6">
+            {EXTERNAL_GROUPS.filter((g) => g.title !== 'ODA.dream').map((group) => (
+              <div key={group.title}>
+                <span className={`${t.highlight} text-text-primary mb-4 block`}>{group.title}</span>
                 <div className={`flex flex-col ${s.stack}`}>
-                  {EXTERNAL_GROUPS.find((g) => g.title === 'ODA.dream')!.links.map((link) => (
+                  {group.links.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
@@ -181,16 +124,36 @@ export default function Footer({ onNavigate }: FooterProps) {
                   ))}
                 </div>
               </div>
-              <div>
-                <span className={`${t.highlight} text-text-primary mb-4 block`}>Контакты</span>
-                <div className={`flex flex-col ${s.stack}`}>
+            ))}
+          </div>
+
+          {/* External links right column + Contacts */}
+          <div className="lg:col-span-1 flex flex-col gap-6">
+            <div>
+              <span className={`${t.highlight} text-text-primary mb-4 block`}>ODA.dream</span>
+              <div className={`flex flex-col ${s.stack}`}>
+                {EXTERNAL_GROUPS.find((g) => g.title === 'ODA.dream')!.links.map((link) => (
                   <a
-                    href="mailto:hi@odadream.art"
-                    className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors break-all`}
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${t.caption} text-text-muted hover:text-accent-primary transition-colors`}
                   >
-                    hi@odadream.art
+                    {link.label}
                   </a>
-                </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <span className={`${t.highlight} text-text-primary mb-4 block`}>Контакты</span>
+              <div className={`flex flex-col ${s.stack}`}>
+                <a
+                  href="mailto:hi@odadream.art"
+                  className={`${t.navLink} text-text-muted hover:text-accent-primary transition-colors break-all`}
+                >
+                  hi@odadream.art
+                </a>
               </div>
             </div>
           </div>
