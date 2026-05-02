@@ -26,10 +26,8 @@ const EXTERNAL_GROUPS: ExternalGroup[] = [
     ],
   },
   {
-    title: 'Регистрация',
-    links: [
-      { label: 'Timepad', href: 'https://tsiolkovskiy-fest-event.timepad.ru/event/3937269/' },
-    ],
+    title: 'Площадка',
+    links: [{ label: 'ИКЦ', href: 'https://www.icc40.ru/' }],
   },
   {
     title: 'ODA.dream',
@@ -40,8 +38,10 @@ const EXTERNAL_GROUPS: ExternalGroup[] = [
     ],
   },
   {
-    title: 'Площадка',
-    links: [{ label: 'ИКЦ', href: 'https://www.icc40.ru/' }],
+    title: 'Регистрация',
+    links: [
+      { label: 'Timepad', href: 'https://tsiolkovskiy-fest-event.timepad.ru/event/3937269/' },
+    ],
   },
 ];
 
