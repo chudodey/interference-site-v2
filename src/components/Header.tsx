@@ -29,7 +29,10 @@ export default function Header({ menuOpen, setMenuOpen, onNavigate }: HeaderProp
             onClick={() => onNavigate('hero')}
             className={`${t.navLinkLarge} text-text-primary hover:text-accent-primary transition-colors whitespace-nowrap`}
           >
-            ИР <span className={`${t.caption} text-text-muted font-normal`}>· 16 мая · 19:00</span>
+            ИР{' '}
+            <span className={`${t.caption} text-text-muted font-normal`}>
+              * 16 МАЯ * 19:00 * ИКЦ * КАЛУГА
+            </span>
           </button>
 
           <nav className={`hidden md:flex items-center ${s.gapLg}`}>
