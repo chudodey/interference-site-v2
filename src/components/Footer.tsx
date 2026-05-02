@@ -77,7 +77,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
   return (
     <footer className="bg-bg-secondary border-t border-border">
-      <div className={`max-w-5xl mx-auto ${s.container} py-12 md:py-16`}>
+      <div className={`max-w-5xl mx-auto ${s.container} ${s.footerPadding}`}>
         {/* Main grid */}
         <div className={`grid grid-cols-3 lg:grid-cols-4 ${s.gapLg} ${s.mbLg}`}>
           {/* Brand */}
@@ -92,7 +92,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Navigation */}
           <div className="lg:col-span-1">
-            <span className={`${t.highlight} text-text-primary mb-4 block`}>Навигация</span>
+            <span className={`${t.highlight} text-text-primary ${s.mbSm} block`}>Навигация</span>
             <nav className={`flex flex-col ${s.stack}`}>
               {NAV_LINKS.map((link) => (
                 <button
@@ -107,9 +107,9 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* External links left column — ODA.dream + Contacts (higher priority) */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
+          <div className={`lg:col-span-1 flex flex-col ${s.gapMd6}`}>
             <div>
-              <span className={`${t.highlight} text-text-primary mb-4 block`}>ODA.dream</span>
+              <span className={`${t.highlight} text-text-primary ${s.mbSm} block`}>ODA.dream</span>
               <div className={`flex flex-col ${s.stack}`}>
                 {EXTERNAL_GROUPS.find((g) => g.title === 'ODA.dream')!.links.map((link) => (
                   <a
@@ -125,7 +125,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </div>
             </div>
             <div>
-              <span className={`${t.highlight} text-text-primary mb-4 block`}>Контакты</span>
+              <span className={`${t.highlight} text-text-primary ${s.mbSm} block`}>Контакты</span>
               <div className={`flex flex-col ${s.stack}`}>
                 <a
                   href="mailto:hi@odadream.art"
@@ -138,10 +138,10 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* External links right column — Festival, Registration, Venue */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
+          <div className={`lg:col-span-1 flex flex-col ${s.gapMd6}`}>
             {EXTERNAL_GROUPS.filter((g) => g.title !== 'ODA.dream').map((group) => (
               <div key={group.title}>
-                <span className={`${t.highlight} text-text-primary mb-4 block`}>{group.title}</span>
+                <span className={`${t.highlight} text-text-primary ${s.mbSm} block`}>{group.title}</span>
                 <div className={`flex flex-col ${s.stack}`}>
                   {group.links.map((link) => (
                     <a
@@ -163,7 +163,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <Divider />
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+        <div className={`${s.footerBar} flex flex-col sm:flex-row items-center justify-center ${s.footerBarGap}`}>
           <span className={`${t.label} text-text-subtle`}>
             © {currentYear} ODA.dream. Все права защищены.
           </span>

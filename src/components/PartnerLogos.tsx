@@ -1,4 +1,5 @@
 import { t } from '../styles/typography';
+import { s } from '../styles/spacing';
 
 const ORGANIZERS = [
   {
@@ -60,7 +61,7 @@ interface LogoItem {
 
 function LogoRow({ items }: { items: LogoItem[] }) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+    <div className={`flex flex-wrap items-center justify-center ${s.gapMdLg}`}>
       {items.map((item) => (
         <a
           key={item.src}
@@ -84,15 +85,15 @@ function LogoRow({ items }: { items: LogoItem[] }) {
 
 export default function PartnerLogos() {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-12 w-full">
+    <div className={`flex flex-col md:flex-row items-center md:items-start justify-center ${s.gapLgXl} w-full`}>
       {/* Организаторы */}
-      <div className="flex flex-col items-center gap-3">
+      <div className={`flex flex-col items-center ${s.gapSm}`}>
         <span className={`${t.label} text-text-muted`}>Организаторы</span>
         <LogoRow items={ORGANIZERS} />
       </div>
 
       {/* Партнёры */}
-      <div className="flex flex-col items-center gap-3">
+      <div className={`flex flex-col items-center ${s.gapSm}`}>
         <span className={`${t.label} text-text-muted`}>Партнёры</span>
         <LogoRow items={PARTNERS} />
       </div>

@@ -54,7 +54,7 @@ export default function Accordion({ items }: AccordionProps) {
                 isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className={`px-4 pb-4 md:px-5 md:pb-5`}>
+              <div className={`${s.accordionPadding}`}>
                 <div className={`${t.caption} text-text-muted`}>{item.content}</div>
               </div>
             </div>

@@ -132,7 +132,7 @@ export default function PhotoArchive() {
 
         <div
           ref={stripRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-4 scrollbar-none px-4 md:px-8 cursor-grab select-none"
+          className={`flex overflow-x-auto snap-x snap-mandatory ${s.gapMdLg} ${s.photoStripPadding} scrollbar-none ${s.container} cursor-grab select-none`}
           style={{ touchAction: 'pan-x' }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}

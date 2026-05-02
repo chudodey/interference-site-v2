@@ -34,8 +34,17 @@ export const s = {
   /** Gap — стандартный (карточки, flex-ряды) */
   gapMd: 'gap-4',
 
+  /** Gap — промежуточный (24px) */
+  gapMd6: 'gap-6',
+
   /** Gap — большой (крупные группы) */
   gapLg: 'gap-8',
+
+  /** Gap — responsive: мобильный md / десктоп lg */
+  gapMdLg: 'gap-4 md:gap-6',
+
+  /** Gap — responsive: мобильный lg / десктоп xl */
+  gapLgXl: 'gap-8 md:gap-12',
 
   /** Вертикальный стек — стандартный */
   stack: 'space-y-4',
@@ -48,6 +57,31 @@ export const s = {
 
   /** Внутренний отступ — крупный (большие карточки) */
   cardLg: 'p-6 md:p-8',
+
+  /** Внутренний отступ аккордеона */
+  accordionPadding: 'px-4 pb-4 md:px-5 md:pb-5',
+
+  /** Внутренний отступ футера */
+  footerPadding: 'py-12 md:py-16',
+
+  /** Внутренний отступ Hero (контент под карточкой) */
+  heroInner: 'px-6 pt-24 pb-12',
+
+  /** Внутренний отступ кнопки */
+  buttonPadding: 'px-6 py-3 md:px-8 md:py-3',
+
+  /** Нижний отступ фото-ленты */
+  photoStripPadding: 'pb-4',
+
+  /** Отступы таймлайна */
+  timelineGap: 'gap-6 md:gap-0',
+
+  /** Отступы нижней строки футера */
+  footerBar: 'pt-8',
+  footerBarGap: 'gap-2 sm:gap-6',
+
+  /** Карточка партнёра */
+  partnerCard: 'px-4 py-3',
 
   /** Divider — вертикальные отступы */
   divider: 'my-8 md:my-12',

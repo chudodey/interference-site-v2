@@ -20,7 +20,7 @@ export default function QuantumButton({
 }: QuantumButtonProps) {
   const baseStyles = `
     inline-flex items-center justify-center gap-2
-    px-6 py-3 md:px-8 md:py-3
+    ${s.buttonPadding}
     ${s.gapSm}
     ${t.button}
     transition-all duration-300

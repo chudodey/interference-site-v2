@@ -30,7 +30,7 @@ export default function Timeline({ items }: TimelineProps) {
           return (
             <div
               key={item.time}
-              className={`relative flex items-start gap-6 md:gap-0 ${
+              className={`relative flex items-start ${s.timelineGap} ${
                 isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
               onMouseEnter={() => setActiveIndex(index)}

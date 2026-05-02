@@ -47,7 +47,7 @@ export default function Authors() {
         <div
           className={`${s.cardLg} border border-accent-primary/30 bg-accent-primary/5 ${s.mbLg}`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${s.gapMd6}`}>
             <div>
               <span className={`${t.badge} text-accent-primary mb-2 block`}>Площадка</span>
               <h3 className={`${t.highlight} text-text-primary mb-1`}>{venueInfo.name}</h3>
@@ -76,7 +76,7 @@ export default function Authors() {
                 href={org.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-3 border border-border bg-bg-secondary hover:border-accent-primary/40 transition-colors min-w-[180px]"
+                className={`flex items-center ${s.gapSm} ${s.partnerCard} border border-border bg-bg-secondary hover:border-accent-primary/40 transition-colors min-w-[180px]`}
               >
                 {org.logo && (
                   <img
@@ -105,7 +105,7 @@ export default function Authors() {
                 href={partner.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-3 border border-border bg-bg-secondary hover:border-accent-secondary/40 transition-colors min-w-[180px]"
+                className={`flex items-center ${s.gapSm} ${s.partnerCard} border border-border bg-bg-secondary hover:border-accent-secondary/40 transition-colors min-w-[180px]`}
               >
                 {partner.logo && (
                   <img

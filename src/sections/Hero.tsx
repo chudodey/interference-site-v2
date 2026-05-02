@@ -64,7 +64,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         style={{ willChange: 'transform' }}
       />
 
-      <div className="relative z-10 w-full max-w-xl mx-auto px-6 text-center flex flex-col items-center pt-24 pb-12">
+      <div className={`relative z-10 w-full max-w-xl mx-auto text-center flex flex-col items-center ${s.heroInner}`}>
         <div
           ref={cardRef}
           className={`bg-bg-primary/60 backdrop-blur-md ${s.cardLg} border border-border w-full`}
